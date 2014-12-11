@@ -1,0 +1,9 @@
+# This file will carry all the tested cli commands for security groups in a VPC
+
+# create a security group
+
+aws ec2 create-security-group --group-name "SecGroupFromCLI" --vpc-id vpc-70598e15 --description "Creating a group from CLI" --region us-west-2
+
+# open up port 80
+
+aws ec2 authorize-security-group-ingress --group-id "sg-2f4f364a" --protocol tcp --port 80 --cidr 0.0.0.0/0 --region us-west-2 

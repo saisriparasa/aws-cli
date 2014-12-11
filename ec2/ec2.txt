@@ -1,0 +1,11 @@
+# This file will be used for aws cli commands to work with EC2
+
+# Gets all the regions 
+# Weird it has a dependency on the region even when looking for regions
+aws ec2 describe-regions --region us-west-2
+
+# Gets all the instances in us-west-2
+aws ec2 describe-instances --region us-west-2
+
+# Gets a list of all VPCs
+aws ec2 describe-vpcs --region us-west-2
